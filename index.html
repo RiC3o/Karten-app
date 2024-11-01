@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karte ziehen</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #f0f0f0; }
+        #container { text-align: center; }
+        button { padding: 10px 20px; font-size: 18px; margin-top: 20px; }
+        #card { margin-top: 20px; font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Karte ziehen</h1>
+        <button onclick="drawCard()">Ziehe eine Karte</button>
+        <div id="card"></div>
+    </div>
+
+    <script>
+        // Liste von 100 Karten (oder Bild-URLs, Namen, Beschreibungen)
+        const cards = [
+            "Karte 1", "Karte 2", "Karte 3", "Karte 4", "Karte 5", "Karte 6", "Karte 7", "Karte 8", "Karte 9", "Karte 10",
+            // Füge weitere Karten hinzu bis zu 100 Karten
+            "Karte 100"
+        ];
+
+        function drawCard() {
+            // Zufällige Karte auswählen
+            const randomIndex = Math.floor(Math.random() * cards.length);
+            const selectedCard = cards[randomIndex];
+            
+            // Ausgewählte Karte anzeigen
+            document.getElementById("card").innerText = selectedCard;
+        }
+    </script>
+</body>
+</html>
