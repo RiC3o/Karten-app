@@ -50,30 +50,16 @@ h1 {
     background-color: #ffffff;
 }
 
-.task-title {
-    font-weight: bold;
-    font-size: 16px;
-    color: #333333;
-    margin: 0;
-}
-
-.task-text {
-    font-size: 14px;
-    color: #333333;
-    margin: 10px 0;
-}
-
-.word {
-    font-weight: bold;
-    font-size: 24px;
-    color: #000000;
-    margin: 15px 0;
+.card-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
 }
 
 .points {
     font-size: 12px;
     color: #333333;
-    margin: 0;
+    margin-top: 10px;
 }
 
 button {
