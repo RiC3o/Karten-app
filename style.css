@@ -1,0 +1,94 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+#app {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.instruction {
+    font-size: 14px;
+    color: #333333;
+    margin: 15px 0;
+}
+
+.card {
+    border: 2px solid #333333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.task-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+    margin: 0;
+}
+
+.task-text {
+    font-size: 14px;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.word {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+    margin: 15px 0;
+}
+
+.points {
+    font-size: 12px;
+    color: #333333;
+    margin: 0;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #333333;
+}
