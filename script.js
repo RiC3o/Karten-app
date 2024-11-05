@@ -10,14 +10,14 @@ let currentIndex = 0;
 // Funktion zum Ziehen einer neuen Karte
 function drawCard() {
     // Wenn Wissenskarte ("karte4.png") angezeigt wird und Button auf "Lösung anzeigen" steht
-    if (cardImage.src.endsWith("karte4.png") && drawButton.innerText === "Lösung anzeigen") {
+    if (cardImage.src.includes("karte4.png") && drawButton.innerText === "Lösung anzeigen") {
         cardImage.src = `${solutionCard}?timestamp=${new Date().getTime()}`; // Zeigt die Lösungskarte an und umgeht den Cache
         drawButton.innerText = "Ziehe eine Karte"; // Button zurücksetzen
         return;
     }
 
     // Wenn die Lösungskarte angezeigt wird, wieder zur nächsten Karte wechseln
-    if (cardImage.src.endsWith("karte4-1.png")) {
+    if (cardImage.src.incudes("karte4-1.png")) {
         // Neue Karte ziehen (der Reihe nach)
         currentIndex = (currentIndex + 1) % cards.length;
         cardImage.src = `${cards[currentIndex]}?timestamp=${new Date().getTime()}`; // Cache umgehen
@@ -30,7 +30,7 @@ function drawCard() {
     cardImage.src = `${cards[currentIndex]}?timestamp=${new Date().getTime()}`; // Cache umgehen
 
     // Wenn "karte4.png" die gezogene Karte ist, ändere den Button zu "Lösung anzeigen"
-    if (cardImage.src.endsWith("karte4.png")) {
+    if (cardImage.src.includes("karte4.png")) {
         drawButton.innerText = "Lösung anzeigen";
     } else {
         drawButton.innerText = "Ziehe eine Karte";
