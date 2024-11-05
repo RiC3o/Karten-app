@@ -10,13 +10,13 @@ let currentIndex = 0;
 function drawCard() {
     // Wenn Wissenskarte ("karte4.png") angezeigt wird und Button auf "Lösung anzeigen" steht
     if (cardImage.src.includes("karte4.png") && drawButton.innerText === "Lösung anzeigen") {
-        cardImage.src = "bilder/loesungskarte.png"; // Ersetze durch den tatsächlichen Pfad zur Lösungskarte
+        cardImage.src = "bilder/4-Loesung.png"; // Ersetze durch den tatsächlichen Pfad zur Lösungskarte
         drawButton.innerText = "Ziehe eine Karte"; // Button zurücksetzen
         return;
     }
 
     // Wenn die Lösungskarte angezeigt wird, wieder zur nächsten Karte wechseln
-    if (cardImage.src.includes("loesungskarte.png")) {
+    if (cardImage.src.includes("4-Loesung.png")) {
         // Neue Karte ziehen (hier der Reihe nach)
         currentIndex = (currentIndex + 1) % cards.length;
         cardImage.src = cards[currentIndex];
