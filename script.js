@@ -17,7 +17,7 @@ function drawCard() {
     }
 
     // Wenn die Lösungskarte angezeigt wird, wieder zur nächsten Karte wechseln
-    if (cardImage.src.includes("karte4-1.png")) {
+    if (cardImage.src.includes("bilder/karte4-1.png")) {
         // Neue Karte ziehen (der Reihe nach)
         currentIndex = (currentIndex + 1) % cards.length;
         cardImage.src = cards[currentIndex];
