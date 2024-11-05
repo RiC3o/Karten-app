@@ -4,21 +4,20 @@ const drawButton = document.querySelector("button");
 
 // Kartenliste mit allen Karten
 const cards = ["bilder/karte1.png", "bilder/karte2.png", "bilder/karte3.png", "bilder/karte4.png"];
-const solutionCard = "bilder/karte4-1.png"; // Die Lösungskarte für "karte4.png"
 let currentIndex = 0;
 
 // Funktion zum Ziehen einer neuen Karte
 function drawCard() {
     // Wenn Wissenskarte ("karte4.png") angezeigt wird und Button auf "Lösung anzeigen" steht
     if (cardImage.src.includes("karte4.png") && drawButton.innerText === "Lösung anzeigen") {
-        cardImage.src = solutionCard; // Zeigt die Lösungskarte an
+        cardImage.src = "bilder/loesungskarte.png"; // Ersetze durch den tatsächlichen Pfad zur Lösungskarte
         drawButton.innerText = "Ziehe eine Karte"; // Button zurücksetzen
         return;
     }
 
     // Wenn die Lösungskarte angezeigt wird, wieder zur nächsten Karte wechseln
-    if (cardImage.src.includes("karte4-1.png")) {
-        // Neue Karte ziehen (der Reihe nach)
+    if (cardImage.src.includes("loesungskarte.png")) {
+        // Neue Karte ziehen (hier der Reihe nach)
         currentIndex = (currentIndex + 1) % cards.length;
         cardImage.src = cards[currentIndex];
         drawButton.innerText = "Ziehe eine Karte"; // Button zurücksetzen
